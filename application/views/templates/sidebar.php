@@ -5,8 +5,8 @@
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
       <div class="sidebar-brand-logo">
           <div class="canter">
-              <img src="assets/img/Rotatedonut.png" alt="logo" width="80" height="70">
-              <div class="sidebar-brand-text mx-3">Varo D'nuts</div>
+              <img src="assets/img/Discadia.png" alt="logo" width="105" height="105">
+              <div class="sidebar-brand-text mx-3">DISCADIA</div>
           </div>
         
         

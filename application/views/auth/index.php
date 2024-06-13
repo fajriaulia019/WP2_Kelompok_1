@@ -5,7 +5,7 @@
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
         <div class="sidebar-brand-logo">
           <div class="canter">
-              <img src="assets/img/Kd.png" alt="logo" width="250" height="260">
+              <img src="assets/img/Discadia.png" alt="logo" width="250" height="250">
           </div>
 
       </a>
@@ -18,7 +18,7 @@
             <div class="col-lg">
               <div class="p-5">
                 <div class="text-center">
-                <h1 class="h1 text-center-1200 mb-4 mx-3">PT. Varo D'Nuts</h1>
+                <h1 class="h1 text-center-1200 mb-4 mx-3">PT. DISCADIA</h1>
                   <h1 class="h4 text-gray-900 mb-4">Sistem Absensi Karyawan</h1>
                   <hr>
                 </div>

@@ -2,7 +2,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; CI PT.Among Utama <?= date("Y") ?> - Sistem Absensi Karyawan</span>
+            <span>Copyright &copy; CI PT.DISCADIA <?= date("Y") ?> - Sistem Absensi Karyawan</span>
           </div>
         </div>
       </footer>

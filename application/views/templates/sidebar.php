@@ -5,11 +5,10 @@
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
       <div class="sidebar-brand-logo">
           <div class="canter">
-              <img src="assets/img/Discadia.png" alt="logo" width="105" height="105">
+              <img src="<?= base_url('assets/img/Discadia.png'); ?>" alt="logo" width="105" height="105">
               <div class="sidebar-brand-text mx-3">DISCADIA</div>
           </div>
-        
-        
+          <div>
       </a>
 
 

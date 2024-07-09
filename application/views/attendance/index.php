@@ -1,3 +1,24 @@
+<?php
+// Mendapatkan shift dari akun
+$shift = $account['shift'];
+
+// Query database untuk mendapatkan start dan end berdasarkan shift
+$this->db->select('start, end');
+$this->db->from('shift');
+$this->db->where('id', $shift);
+$query = $this->db->get();
+
+if ($query->num_rows() > 0) {
+    $row = $query->row();
+    $startTime = $row->start;
+    $endTime = $row->end;
+} else {
+    // Set default waktu jika shift tidak ditemukan
+    $startTime = '09:00:00';
+    $endTime = '17:00:00';
+}
+?>
+
       <!-- Begin Page Content -->
       <div class="container-fluid">
 
@@ -25,7 +46,7 @@
                       <h1 class="text-center my-3">TERIMA KASIH ATAS KEHADIRANNYA</h1>
                       <h5 class="card-title text-center mb-4 px-4">Selamat Beristirahat <b>AKHIR PEKAN</b></h5>
                       <b>
-                        <p class="text-center text-dark pt-3">Sampai jumpa di hari Senin!</p>
+                        <p class="text-center text-dark pt-3">Sampai jumpa di hari Senin <?= $startTime['in_status']; ?>!</p>
                       </b>
                       <div class="row">
                         <button disabled class="btn btn-danger rounded-0 btn-sm text-xs mx-auto" style="font-size: 35px; width: 200px; height: 200px">
@@ -38,7 +59,7 @@
                         <div class="row mb-3">
                           <div class="col-lg-5">
                             <input type="hidden" name="work_shift" value="<?= $account['shift']; ?>">
-                            <label for="work_shift" class="col-form-label">Pergeseran Kerja</label>
+                            <label for="work_shift" class="col-form-label"> Jam Kerja</label>
                             <input class="form-control" type="text" placeholder="<?= date("h:i A", strtotime('2022-06-23 ' . $startTime)); ?> - <?= date("h:i A", strtotime('2022-06-25 ' . $endTime)); ?>" value="<?= date("h:i A", strtotime('2022-06-23 ' . $startTime)); ?> - <?= date("h:i A", strtotime('2022-06-23 ' . $endTime)); ?>" readonly>
                           </div>
                           <div class="col-lg-5 offset-lg-1">
@@ -88,7 +109,7 @@
                             </a>
                           <?php else : ?>
                             <b>
-                              <p class="text-center text-dark pt-3">Sampai jumpa besok!</p>
+                              <p class="text-center text-dark pt-3">Sampai jumpa besok jam <?= date("h:i A", strtotime('2022-06-23 ' . $startTime)); ?> - <?= date("h:i A", strtotime('2022-06-23 ' . $endTime)); ?>!</p>
                             </b>
 
                           <?php endif; ?>

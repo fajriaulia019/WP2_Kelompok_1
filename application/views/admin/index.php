@@ -185,9 +185,15 @@
 
   <!-- Optional JavaScript -->
   <script>
-    function printPage() {
-      window.print();
-    }
+  function printPage() {
+    var table = document.getElementById('dataTable');
+    var printWindow = window.open('', '', 'width=800,height=600');
+    printWindow.document.write('<html><head><title>Print Table</title></head><body>');
+    printWindow.document.write(table.outerHTML);
+    printWindow.document.write('</body></html>');
+    printWindow.print();
+    printWindow.close();
+  }
   </script>
 
   <div class="row">
